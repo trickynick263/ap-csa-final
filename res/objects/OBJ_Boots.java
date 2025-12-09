@@ -1,0 +1,15 @@
+package res.objects;
+
+import javax.imageio.ImageIO;
+
+public class OBJ_Boots extends SuperObject {//a boots object that the player can pick up to increase speed
+    public OBJ_Boots(){
+        name = "Boots";//sets name to Boots as it is a boots object
+        try{
+            image = ImageIO.read(getClass().getResourceAsStream("/res/objects/boots.png"));
+        }catch(java.io.IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+}

@@ -7,34 +7,18 @@ public class Projectile extends Entity{
     public int maxLife;
     public int life;          // how long it has existed
     public boolean alive;     // should we keep updating/drawing it?
-    
-    
     public Projectile(GamePanel gp){
         super(gp);
         this.gp = gp;
-        
     }
-    
     public void set(Entity user,int worldX,int worldY, String direction){
-        
-        
-        
-    
        this.worldX = worldX;
         this.worldY = worldY;
         this.direction = direction;
         this.life = 0;
         this.alive = true;
-
-        
-
-        
-
     }
-
     public void update(){
-
-        
         if(alive){
         switch(direction){
                 case "up":
@@ -50,10 +34,6 @@ public class Projectile extends Entity{
                     worldX += speed;
                     break;
             }
-        
-
-
-
         spriteCounter++;
         if(spriteCounter > 12){//changes sprite every 12 frames
             if(spriteNum == 1){

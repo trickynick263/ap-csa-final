@@ -30,49 +30,38 @@ public class Entity {//THIS CLASS WILL BE THE BASE CLASS FOR ALL ENTITIES IN THE
     }
 
     public void draw(Graphics2D g2){
-
         int screenX = worldX - gp.player.worldX + gp.player.screenX;
         int screenY = worldY - gp.player.worldY + gp.player.screenY;//copy from tilemanager draw method
-
         //draw object only if it is in the visible area of the screen
         if(worldX + gp.tileSize > gp.player.worldX - gp.player.screenX &&
            worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
            worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
            worldY - gp.tileSize < gp.player.worldY + gp.player.screenY){
-        
             BufferedImage image = null;
             switch(direction){//these are the buffered images we loaded earlier
         case "up"://based on direction we pick a differnt image to draw
             if(spriteNum == 1){
-                image = up1;
-            }
+                image = up1;}
             if(spriteNum == 2){
-                image = up2;
-            }
+                image = up2;}
             break;
         case "down":
             if(spriteNum == 1){
-                image = down1;
-            }
+                image = down1;}
             if(spriteNum == 2){
-                image = down2;
-            }
+                image = down2;}
             break;
         case "left":
             if(spriteNum == 1){
-                image = left1;
-            }
+                image = left1;}
             if(spriteNum == 2){
-                image = left2;
-            }
+                image = left2;}
             break;
         case "right":
             if(spriteNum == 1){
-                image = right1;
-            }
+                image = right1;}
             if(spriteNum == 2){
-                image = right2;
-            }
+                image = right2;}
             break;//                                                    image observer,js type null
         }//                                                            ^^^^
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);//draws the image at the x and y position with the tile size width and height

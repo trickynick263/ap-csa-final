@@ -58,8 +58,8 @@ public class Player extends Entity {
 
     }
     public void setDefaultValues(){
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;//starting position of player in the world
+        worldX = gp.tileSize * 2;
+        worldY = gp.tileSize * 3;//starting position of player in the world
         speed = 4;
         direction = "down";
         projectile = new OBJ_Fireball(gp);
